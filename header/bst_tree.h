@@ -1,4 +1,4 @@
-#ifndef HEADER_BSTTREE_H_
-#define HEADER_BSTTREE_H_
+#ifndef OSAP_HEADER_BSTTREE_H_
+#define OSAP_HEADER_BSTTREE_H_
 
 #endif 
