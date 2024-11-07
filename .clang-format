@@ -1,0 +1,34 @@
+BasedOnStyle: Google  # Google 스타일을 베이스로 하여 CSE3210 규칙에 맞게 수정
+IndentWidth: 2  # 들여쓰기는 2칸 스페이스 사용
+TabWidth: 2
+UseTab: Never  # 탭 대신 스페이스만 사용
+ColumnLimit: 80  # 코드 길이 제한 (주석과 헤더 가드 제외)
+
+# 함수 및 변수명 스타일
+Language: Cpp
+AllowShortFunctionsOnASingleLine: Inline  # 짧은 함수는 한 줄에
+ConstructorInitializerAllOnOneLineOrOnePerLine: false  # 초기화 목록 한 줄에 모두 혹은 하나씩
+SpaceBeforeParens: ControlStatements  # 제어문 괄호 앞에 공백
+
+# 이름 규칙에 맞춘 설정
+NamespaceIndentation: All  # 네임스페이스 내부 모두 들여쓰기
+AlignConsecutiveAssignments: true  # 연속 대입문 정렬
+AlignConsecutiveDeclarations: true  # 연속 선언문 정렬
+AlignTrailingComments: true  # 주석 정렬
+SpacesInParentheses: false  # 괄호 안에 공백 넣지 않음
+SpaceAfterCStyleCast: false  # C 스타일 캐스트 후 공백 없음
+Cpp11BracedListStyle: true  # C++11 브레이스 스타일 사용
+
+# Include 순서 정의
+IncludeBlocks: Regroup  # Include 순서 블록별로 재그룹
+IncludeCategories:
+  - Regex: '^<.*\.h>'
+    Priority: 1  # C 라이브러리
+  - Regex: '^<.*>'
+    Priority: 2  # C++ 라이브러리
+  - Regex: '.*'
+    Priority: 3  # 프로젝트 헤더 파일
+
+# 기타 설정
+BreakBeforeBraces: Attach  # 여는 브레이스 {는 같은 줄에
+PointerAlignment: Left  # 포인터는 왼쪽 정렬
