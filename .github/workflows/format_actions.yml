@@ -5,6 +5,12 @@ on:
     branches: [ "dev" ]
     paths-ignore:
       - "README.md"
+      - "LICENSE"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".gitignore"
+      - ".prettierrc"
+      - ".eslintrc"
 
 jobs:
   format-test:
