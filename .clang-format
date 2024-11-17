@@ -12,8 +12,6 @@ SpaceBeforeParens: ControlStatements  # 제어문 괄호 앞에 공백
 
 # 이름 규칙에 맞춘 설정
 NamespaceIndentation: All  # 네임스페이스 내부 모두 들여쓰기
-AlignConsecutiveAssignments: true  # 연속 대입문 정렬
-AlignConsecutiveDeclarations: true  # 연속 선언문 정렬
 AlignTrailingComments: true  # 주석 정렬
 SpacesInParentheses: false  # 괄호 안에 공백 넣지 않음
 SpaceAfterCStyleCast: false  # C 스타일 캐스트 후 공백 없음
