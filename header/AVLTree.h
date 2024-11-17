@@ -12,7 +12,6 @@ class AVLTree {
   virtual void Average(int x) = 0;
   virtual void Rank(int x) = 0;
   virtual void Erase(int x) = 0;
-  virtual void PrintTree() = 0;
 };
 
 #endif
