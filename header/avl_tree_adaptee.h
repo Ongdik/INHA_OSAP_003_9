@@ -9,12 +9,12 @@
 using namespace std;
 
 struct node {
-  int   key;
+  int key;
   node* parent;
   node* left;
   node* right;
-  int   height;
-  int   size;
+  int height;
+  int size;
   node(int key);
 };
 
@@ -22,29 +22,29 @@ class AVLTreeAdaptee {
  public:
   AVLTreeAdaptee();
 
-  int   GetDepth(node* n);
-  int   GetHeightByNode(node* n);
-  int   GetSubTreeSize(node* n);
-  void  UpdateSubTreeSize(node* n);
-  int   Finding(int key);
+  int GetDepth(node* n);
+  int GetHeightByNode(node* n);
+  int GetSubTreeSize(node* n);
+  void UpdateSubTreeSize(node* n);
+  int Finding(int key);
   node* Search(node* cur_node, int key);
-  void  UpdateHeight(node* n);
-  int   GetBalance(node* n);
+  void UpdateHeight(node* n);
+  int GetBalance(node* n);
   node* RotateRight(node* y);
   node* RotateLeft(node* x);
   node* Balance(node* n);
-  int   Inserting(int x);
-  int   IsEmpty();
-  int   GetSize();
-  int   GetHeight();
-  void  GetAncestor(int x);
-  void  GetAverage(int x);
-  void  GetRank(int x);
-  void  Erasing(int key);
+  int Inserting(int x);
+  int IsEmpty();
+  int GetSize();
+  int GetHeight();
+  void GetAncestor(int x);
+  void GetAverage(int x);
+  void GetRank(int x);
+  void Erasing(int key);
 
  private:
   node* root_;
-  int   size_;
+  int size_;
 };
 
 #endif
