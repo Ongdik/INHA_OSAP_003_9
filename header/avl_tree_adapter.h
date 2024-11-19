@@ -31,4 +31,4 @@ class AVLTreeAdapter : public AVLTree {
   AVLTreeAdaptee adaptee_;  // 내부적으로 사용할 AVLTreeAdaptee 객체
 };
 
-#endif  // OSAP_HEADER_AVLTREE_ADAPTER_H_
+#endif  
