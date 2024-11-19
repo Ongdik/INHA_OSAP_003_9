@@ -27,13 +27,16 @@ jobs:
 
     # 2. CMake 설정을 수행하여 빌드 파일을 생성
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DENABLE_COVERAGE=ON
+      #run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DENABLE_COVERAGE=ON
+      run: cmake -B build -S . -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DENABLE_COVERAGE=ON
 
     # 3. 빌드 수행
     - name: Build
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      #run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      run: cmake --build build --config ${{env.BUILD_TYPE}}
 
     # 4. 테스트 실행
     - name: Test
-      working-directory: ${{github.workspace}}/build
+      #working-directory: ${{github.workspace}}/build
+      working-directory: build
       run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
