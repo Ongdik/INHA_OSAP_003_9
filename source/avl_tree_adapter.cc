@@ -5,8 +5,7 @@ void AVLTreeAdapter::Find(int key) {
 }
 
 void AVLTreeAdapter::Empty() {
-  int result = adaptee_.IsEmpty();
-  cout << result << "\n";
+  cout << adaptee_.IsEmpty() << "\n";
 }
 
 void AVLTreeAdapter::Size() {
