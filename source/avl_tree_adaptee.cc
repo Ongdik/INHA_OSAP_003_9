@@ -27,6 +27,16 @@ int AVLTreeAdaptee::GetHeightByNode(node* n) {
   return n ? n->height : 0;
 }
 
+int AVLTreeAdaptee::Finding(int key) {
+  node* find_node = Search(root_, key);
+  if (find_node == nullptr) return 0;
+
+  int depth = GetDepth(find_node);
+  int height = GetHeightByNode(find_node) - 1;
+
+  return depth + height;
+}
+
 int AVLTreeAdaptee::IsEmpty() {
   return root_ ? 0 : 1;  // 비어있으면 1, 아니면 0
 }
