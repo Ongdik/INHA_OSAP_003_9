@@ -23,6 +23,10 @@ int AVLTreeAdaptee::GetDepth(node* n) {
   return depth;
 }
 
+int AVLTreeAdaptee::GetHeightByNode(node* n) {
+  return n ? n->height : 0;
+}
+
 int AVLTreeAdaptee::IsEmpty() {
   return root_ ? 0 : 1;  // 비어있으면 1, 아니면 0
 }
