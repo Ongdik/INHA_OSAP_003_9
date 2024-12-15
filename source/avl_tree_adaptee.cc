@@ -14,6 +14,15 @@ node* AVLTreeAdaptee::Search(node* cur_node, int key) {
   }
 }
 
+int AVLTreeAdaptee::GetDepth(node* n) {
+  int depth = 0;
+  while (n->parent != nullptr) {
+    n = n->parent;
+    depth++;
+  }
+  return depth;
+}
+
 int AVLTreeAdaptee::IsEmpty() {
   return root_ ? 0 : 1;  // 비어있으면 1, 아니면 0
 }
