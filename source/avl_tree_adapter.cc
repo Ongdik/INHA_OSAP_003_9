@@ -4,3 +4,7 @@ void AVLTreeAdapter::Empty() {
   int result = adaptee_.IsEmpty();
   cout << result << "\n";
 }
+
+void AVLTreeAdapter::Size() {
+  cout << adaptee_.GetSize() << "\n";
+}
