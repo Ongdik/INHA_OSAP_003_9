@@ -1,8 +1,11 @@
 #include "../header/avl_tree_adapter.h"
 
+void AVLTreeAdapter::Find(int key) {
+  cout << adaptee_.Finding(key) << "\n";
+}
+
 void AVLTreeAdapter::Empty() {
-  int result = adaptee_.IsEmpty();
-  cout << result << "\n";
+  cout << adaptee_.IsEmpty() << "\n";
 }
 
 void AVLTreeAdapter::Size() {
