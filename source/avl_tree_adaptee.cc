@@ -9,3 +9,7 @@ int AVLTreeAdaptee::IsEmpty() {
 int AVLTreeAdaptee::GetSize() {
   return size_;
 }
+
+int AVLTreeAdaptee::GetHeight() {
+  return root_ ? (root_->height - 1) : -1;
+}

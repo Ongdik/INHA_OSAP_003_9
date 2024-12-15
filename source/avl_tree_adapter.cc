@@ -8,3 +8,7 @@ void AVLTreeAdapter::Empty() {
 void AVLTreeAdapter::Size() {
   cout << adaptee_.GetSize() << "\n";
 }
+
+void AVLTreeAdapter::Height() {
+  cout << adaptee_.GetHeight() << "\n";
+}
