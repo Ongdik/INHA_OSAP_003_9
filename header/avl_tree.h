@@ -1,5 +1,5 @@
-#ifndef OSAP_HEADER_AVLTREE_ADAPTEE_H_
-#define OSAP_HEADER_AVLTREE_ADAPTEE_H_
+#ifndef OSAP_HEADER_AVLTREE_H_
+#define OSAP_HEADER_AVLTREE_H_
 
 #include <cmath>
 #include <iomanip>
