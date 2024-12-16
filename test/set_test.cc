@@ -1,6 +1,6 @@
-#include "../header/avl_tree.h"
-
 #include <gtest/gtest.h>
+
+#include "../header/set.h"
 
 // 테스트 위한 AVLTree의 추상 메서드
 class MockAVLTree : public Set {
