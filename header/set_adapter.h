@@ -1,5 +1,5 @@
-#ifndef OSAP_HEADER_AVLTREE_ADAPTER_H_
-#define OSAP_HEADER_AVLTREE_ADAPTER_H_
+#ifndef OSAP_HEADER_SET_ADAPTER_H_
+#define OSAP_HEADER_SET_ADAPTER_H_
 
 #include <cmath>
 #include <iomanip>
@@ -8,7 +8,7 @@
 #include <queue>
 
 #include "avl_tree.h"
-#include "avl_tree_adaptee.h"
+#include "set.h"
 using namespace std;
 
 class SetAdapter : public Set {
