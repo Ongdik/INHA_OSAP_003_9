@@ -1,17 +1,17 @@
 #include "../header/set_adapter.h"
 
-void AVLTreeAdapter::Find(int key) {
+void SetAdapter::Find(int key) {
   cout << adaptee_.Finding(key) << "\n";
 }
 
-void AVLTreeAdapter::Empty() {
+void SetAdapter::Empty() {
   cout << adaptee_.IsEmpty() << "\n";
 }
 
-void AVLTreeAdapter::Size() {
+void SetAdapter::Size() {
   cout << adaptee_.GetSize() << "\n";
 }
 
-void AVLTreeAdapter::Height() {
+void SetAdapter::Height() {
   cout << adaptee_.GetHeight() << "\n";
 }
