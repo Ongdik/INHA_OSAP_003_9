@@ -166,3 +166,59 @@ int AVLTree::GetSubTreeSize(node* n) {
 void AVLTree::UpdateSubTreeSize(node* n) {
   n->size = 1 + GetSubTreeSize(n->left) + GetSubTreeSize(n->right);
 }
+
+void AVLTree::Erasing(int key) {
+  node* del_node = Search(root_, key);
+  if (del_node == nullptr) {
+    cout << 0 << endl;
+    return;
+  }
+  size_--;
+  cout << Finding(key) << endl;
+
+  node* par_node = del_node->parent;
+  node* child_node;
+
+  if (del_node->left == nullptr && del_node->right == nullptr) {
+    child_node = nullptr;
+  } else if (del_node->left == nullptr && del_node->right != nullptr) {
+    child_node = del_node->right;
+  } else if (del_node->left != nullptr && del_node->right == nullptr) {
+    child_node = del_node->left;
+  } else {
+    child_node = del_node->right;
+    while (child_node->left != nullptr) {
+      child_node = child_node->left;
+    }
+    del_node->key = child_node->key;
+    del_node = child_node;
+    par_node = del_node->parent;
+    child_node = del_node->right;
+  }
+
+  if (par_node == nullptr) {
+    root_ = child_node;
+    if (root_ != nullptr) root_->parent = nullptr;
+  } else if (del_node == par_node->left) {
+    par_node->left = child_node;
+    if (child_node != nullptr) child_node->parent = par_node;
+  } else {
+    par_node->right = child_node;
+    if (child_node != nullptr) child_node->parent = par_node;
+  }
+
+  delete del_node;
+
+  // 삭제 후 균형 재조정
+  node* cur = par_node;
+  while (cur != nullptr) {
+    UpdateHeight(cur);
+    cur = Balance(cur);
+    cur = cur->parent;
+  }
+
+  // 루트 갱신
+  while (root_->parent != NULL) {
+    root_ = root_->parent;
+  }
+}

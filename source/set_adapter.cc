@@ -19,3 +19,8 @@ void SetAdapter::Height() {
 void SetAdapter::Insert(int x) {
   cout << adaptee_.Inserting(x) << endl;
 }
+
+void SetAdapter::Erase(int x) {
+  adaptee_.Erasing(x);
+}
+
