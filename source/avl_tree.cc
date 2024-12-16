@@ -1,8 +1,8 @@
-#include "../header/avl_tree_adaptee.h"
+#include "../header/avl_tree.h"
 
-AVLTreeAdaptee::AVLTreeAdaptee() : root_(NULL) {}
+AVLTree::AVLTree() : root_(NULL) {}
 
-node* AVLTreeAdaptee::Search(node* cur_node, int key) {
+node* AVLTree::Search(node* cur_node, int key) {
   if (cur_node == nullptr) return nullptr;
 
   if (cur_node->key == key)
@@ -14,7 +14,7 @@ node* AVLTreeAdaptee::Search(node* cur_node, int key) {
   }
 }
 
-int AVLTreeAdaptee::GetDepth(node* n) {
+int AVLTree::GetDepth(node* n) {
   int depth = 0;
   while (n->parent != nullptr) {
     n = n->parent;
@@ -23,11 +23,11 @@ int AVLTreeAdaptee::GetDepth(node* n) {
   return depth;
 }
 
-int AVLTreeAdaptee::GetHeightByNode(node* n) {
+int AVLTree::GetHeightByNode(node* n) {
   return n ? n->height : 0;
 }
 
-int AVLTreeAdaptee::Finding(int key) {
+int AVLTree::Finding(int key) {
   node* find_node = Search(root_, key);
   if (find_node == nullptr) return 0;
 
@@ -37,14 +37,14 @@ int AVLTreeAdaptee::Finding(int key) {
   return depth + height;
 }
 
-int AVLTreeAdaptee::IsEmpty() {
+int AVLTree::IsEmpty() {
   return root_ ? 0 : 1;  // 비어있으면 1, 아니면 0
 }
 
-int AVLTreeAdaptee::GetSize() {
+int AVLTree::GetSize() {
   return size_;
 }
 
-int AVLTreeAdaptee::GetHeight() {
+int AVLTree::GetHeight() {
   return root_ ? (root_->height - 1) : -1;
 }
