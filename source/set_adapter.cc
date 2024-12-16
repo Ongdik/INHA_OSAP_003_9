@@ -23,3 +23,7 @@ void SetAdapter::Insert(int x) {
 void SetAdapter::Erase(int x) {
   adaptee_.Erasing(x);
 }
+
+void SetAdapter::Rank(int x) {
+  adaptee_.GetRank(x);
+}

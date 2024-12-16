@@ -222,3 +222,25 @@ void AVLTree::Erasing(int key) {
     root_ = root_->parent;
   }
 }
+
+void AVLTree::GetRank(int x) {
+  node* cur_node = Search(root_, x);
+  if (cur_node == nullptr) {
+    cout << 0 << endl;
+    return;
+  }
+
+  int depth_height_sum = Finding(x);
+
+  int rank = GetSubTreeSize(cur_node->left) + 1;
+  while (cur_node->parent != nullptr) {
+    if (cur_node == cur_node->parent->left) {
+      cur_node = cur_node->parent;
+      continue;
+    }
+    rank += (GetSubTreeSize(cur_node->parent->left) + 1);
+    cur_node = cur_node->parent;
+  }
+
+  cout << depth_height_sum << " " << rank << endl;
+}
