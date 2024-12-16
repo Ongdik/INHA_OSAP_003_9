@@ -18,9 +18,9 @@ struct node {
   node(int key);
 };
 
-class AVLTreeAdaptee {
+class AVLTree {
  public:
-  AVLTreeAdaptee();
+  AVLTree();
 
   int GetDepth(node* n);
   int GetHeightByNode(node* n);
