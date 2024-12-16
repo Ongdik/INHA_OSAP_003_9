@@ -1,5 +1,5 @@
-#ifndef OSAP_HEADER_AVLTREE_H_
-#define OSAP_HEADER_AVLTREE_H_
+#ifndef OSAP_HEADER_SET_H_
+#define OSAP_HEADER_SET_H_
 
 class Set {
  public:
