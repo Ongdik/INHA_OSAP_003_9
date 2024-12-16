@@ -23,4 +23,3 @@ void SetAdapter::Insert(int x) {
 void SetAdapter::Erase(int x) {
   adaptee_.Erasing(x);
 }
-
