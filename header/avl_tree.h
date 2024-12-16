@@ -1,7 +1,7 @@
 #ifndef OSAP_HEADER_AVLTREE_H_
 #define OSAP_HEADER_AVLTREE_H_
 
-class AVLTree {
+class Set {
  public:
   virtual void Find(int x) = 0;
   virtual void Insert(int x) = 0;
