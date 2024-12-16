@@ -33,9 +33,9 @@ enable_testing()
 # 테스트 파일과 소스 파일을 포함하여 unit_tests 실행 파일 생성
 add_executable(
   unit_tests
-  test/avl_tree_test.cc
+  test/set_test.cc
   #test/bst_tree_test.cc
-  source/avl_tree.cc
+  source/set.cc
   #source/bst_tree.cc
 )
 

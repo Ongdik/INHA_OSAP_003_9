@@ -1,9 +1,9 @@
-#include "../header/avl_tree.h"
+#include "../header/set.h"
 
 #include <gtest/gtest.h>
 
 // 테스트 위한 AVLTree의 추상 메서드
-class MockAVLTree : public AVLTree {
+class MockAVLTree : public Set {
  public:
   void Find(int x) override {}
   void Insert(int x) override {}
