@@ -15,3 +15,7 @@ void SetAdapter::Size() {
 void SetAdapter::Height() {
   cout << adaptee_.GetHeight() << "\n";
 }
+
+void SetAdapter::Insert(int x) {
+  cout << adaptee_.Inserting(x) << endl;
+}
