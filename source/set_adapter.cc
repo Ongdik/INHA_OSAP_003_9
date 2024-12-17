@@ -27,3 +27,11 @@ void SetAdapter::Erase(int x) {
 void SetAdapter::Rank(int x) {
   adaptee_.GetRank(x);
 }
+
+void SetAdapter::Ancestor(int x) {
+    adaptee_.GetAncestor(x);
+}
+
+void SetAdapter::Average(int x) {
+    adaptee_.GetAverage(x);
+}
