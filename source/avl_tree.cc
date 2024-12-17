@@ -251,8 +251,8 @@ void AVLTree::GetAncestor(int x) {
   int key_sum = 0;
   node* cur_node = Search(root_, x)->parent;
   while (cur_node != nullptr) {
-      key_sum += cur_node->key;
-      cur_node = cur_node->parent;
+    key_sum += cur_node->key;
+    cur_node = cur_node->parent;
   }
 
   cout << depth_height_sum << " " << key_sum << endl;
@@ -262,13 +262,13 @@ void AVLTree::GetAverage(int x) {
   node* cur_node = Search(root_, x);
   node* tmp = cur_node;
   while (tmp->left != nullptr) {
-      tmp = tmp->left;
+    tmp = tmp->left;
   }
   int min_val = tmp->key;
 
   tmp = cur_node;
   while (tmp->right != nullptr) {
-      tmp = tmp->right;
+    tmp = tmp->right;
   }
   int max_val = tmp->key;
 
