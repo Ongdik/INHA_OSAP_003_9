@@ -101,7 +101,6 @@ node* AVLTree::RotateLeft(node* x) {
     }
   }
 
-
   UpdateHeight(x);
   UpdateHeight(y);
   UpdateSubTreeSize(x);
