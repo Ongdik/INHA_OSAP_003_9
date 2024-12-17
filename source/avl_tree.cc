@@ -272,5 +272,5 @@ void AVLTree::GetAverage(int x) {
   }
   int max_val = tmp->key;
 
-  cout << (min_val + max_val) / 2.0 << endl;
+  cout << (min_val + max_val) / 2 << endl;
 }
