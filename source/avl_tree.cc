@@ -66,6 +66,14 @@ node* AVLTree::RotateRight(node* y) {
   x->parent = y->parent;
   y->parent = x;
 
+  if (x->parent) {
+    if (x->parent->left == y) {
+      x->parent->left = x;
+    } else {
+      x->parent->right = x;
+    }
+  }
+
   UpdateHeight(y);
   UpdateHeight(x);
   UpdateSubTreeSize(y);
@@ -84,6 +92,15 @@ node* AVLTree::RotateLeft(node* x) {
   if (T2) T2->parent = x;
   y->parent = x->parent;
   x->parent = y;
+
+  if (y->parent) {
+    if (y->parent->left == x) {
+      y->parent->left = y;
+    } else {
+      y->parent->right = y;
+    }
+  }
+
 
   UpdateHeight(x);
   UpdateHeight(y);
