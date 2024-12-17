@@ -46,7 +46,7 @@ int AVLTree::GetSize() {
 }
 
 int AVLTree::GetHeight() {
-  return root_ ? (root_->height - 1) : -1;
+  return root_ ? root_->height : -1;
 }
 
 void AVLTree::UpdateHeight(node* n) {
