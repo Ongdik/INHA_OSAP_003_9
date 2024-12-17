@@ -29,9 +29,9 @@ void SetAdapter::Rank(int x) {
 }
 
 void SetAdapter::Ancestor(int x) {
-    adaptee_.GetAncestor(x);
+  adaptee_.GetAncestor(x);
 }
 
 void SetAdapter::Average(int x) {
-    adaptee_.GetAverage(x);
+  adaptee_.GetAverage(x);
 }
