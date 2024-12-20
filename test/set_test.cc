@@ -59,3 +59,9 @@ TEST_F(AVLTreeTestFixture, BalanceTest) {
   tree_.Inserting(50);
   EXPECT_GT(tree_.GetHeight(), 3);
 }
+
+// AVLTree의 GetDepth 함수 테스트
+TEST_F(AVLTreeTestFixture, GetDepthTest) {
+  node* foundNode = tree_.Search(tree_.GetRoot(), 10);
+  EXPECT_EQ(tree_.GetDepth(foundNode), 0);
+}
