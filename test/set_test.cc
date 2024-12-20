@@ -65,3 +65,9 @@ TEST_F(AVLTreeTestFixture, GetDepthTest) {
   node* foundNode = tree_.Search(tree_.GetRoot(), 10);
   EXPECT_EQ(tree_.GetDepth(foundNode), 0);
 }
+
+// AVLTree의 GetSubTreeSize 함수 테스트
+TEST_F(AVLTreeTestFixture, GetSubTreeSizeTest) {
+  node* foundNode = tree_.Search(tree_.GetRoot(), 10);
+  EXPECT_EQ(tree_.GetSubTreeSize(foundNode), 5);
+}
