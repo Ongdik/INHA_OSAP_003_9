@@ -32,3 +32,11 @@ TEST_F(AVLTreeTestFixture, ConstructorTest) {
   EXPECT_EQ(emptyTree.GetSize(), 0);
   EXPECT_EQ(emptyTree.IsEmpty(), 1);
 }
+
+// AVLTree의 Insert 함수 테스트
+TEST_F(AVLTreeTestFixture, InsertTest) {
+  EXPECT_EQ(tree_.GetSize(), 5);
+  tree_.Inserting(15);
+  EXPECT_EQ(tree_.GetSize(), 6);
+  EXPECT_EQ(tree_.Finding(15), 2);
+}
