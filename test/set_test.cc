@@ -94,3 +94,14 @@ class AVLTreeParameterizedTest
     tree_.Inserting(25);
   }
 };
+
+INSTANTIATE_TEST_CASE_P(
+    AVLTreeFindingTests, AVLTreeParameterizedTest,
+    ::testing::Values(std::make_tuple(10, 0), std::make_tuple(20, 1),
+                      std::make_tuple(30, 2), std::make_tuple(5, 1),
+                      std::make_tuple(25, 2), std::make_tuple(50, 0)));
+
+TEST_P(AVLTreeParameterizedTest, FindingTest) {
+  auto [key, expected] = GetParam();
+  EXPECT_EQ(tree_.Finding(key), expected);
+}
