@@ -25,3 +25,10 @@ class AVLTreeTestFixture : public ::testing::Test {
     // 테스트가 끝난 후 호출됨
   }
 };
+
+// AVLTree의 생성자 테스트
+TEST_F(AVLTreeTestFixture, ConstructorTest) {
+  AVLTree emptyTree;
+  EXPECT_EQ(emptyTree.GetSize(), 0);
+  EXPECT_EQ(emptyTree.IsEmpty(), 1);
+}
