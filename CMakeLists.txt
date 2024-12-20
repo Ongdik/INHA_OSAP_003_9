@@ -34,9 +34,9 @@ enable_testing()
 add_executable(
   unit_tests
   test/set_test.cc
-  #test/bst_tree_test.cc
+  source/avl_tree.cc
   source/set.cc
-  #source/bst_tree.cc
+  source/set_adapter.cc
 )
 
 # GoogleTest 라이브러리 링크

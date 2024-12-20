@@ -1,6 +1,11 @@
 #include "../header/avl_tree.h"
 
-AVLTree::AVLTree() : root_(NULL) {}
+// node의 생성자 구현
+node::node(int key)
+    : key(key), parent(nullptr), left(nullptr), right(nullptr), height(1),
+      size(1) {}
+
+AVLTree::AVLTree() : root_(NULL), size_(0) {}
 
 node* AVLTree::Search(node* cur_node, int key) {
   if (cur_node == nullptr) return nullptr;
@@ -289,4 +294,15 @@ void AVLTree::GetAverage(int x) {
   int max_val = tmp->key;
 
   cout << (min_val + max_val) / 2 << endl;
+}
+
+// 테스트 코드 추가
+node* AVLTree::GetRoot() {
+  return root_;
+}
+
+// AVLTree의 GetBalance 메서드 구현
+int AVLTree::GetBalance(node* n) {
+  if (!n) return 0;
+  return GetHeightByNode(n->left) - GetHeightByNode(n->right);
 }

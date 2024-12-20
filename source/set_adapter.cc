@@ -1,5 +1,7 @@
 #include "../header/set_adapter.h"
 
+SetAdapter::SetAdapter(AVLTree adaptee) : adaptee_(adaptee) {}
+
 void SetAdapter::Find(int key) {
   cout << adaptee_.Finding(key) << "\n";
 }
@@ -34,4 +36,8 @@ void SetAdapter::Ancestor(int x) {
 
 void SetAdapter::Average(int x) {
   adaptee_.GetAverage(x);
+}
+
+AVLTree SetAdapter::GetAdaptee() {
+  return adaptee_;
 }
