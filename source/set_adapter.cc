@@ -35,3 +35,7 @@ void SetAdapter::Ancestor(int x) {
 void SetAdapter::Average(int x) {
   adaptee_.GetAverage(x);
 }
+
+AVLTree SetAdapter::GetAdaptee() {
+  return adaptee_;
+}
