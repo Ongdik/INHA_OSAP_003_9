@@ -172,3 +172,11 @@ TEST_F(SetAdapterTestFixture, AverageTest) {
   std::string output = testing::internal::GetCapturedStdout();
   EXPECT_FALSE(output.empty());
 }
+
+// SetAdapter의 Rank 함수 테스트
+TEST_F(SetAdapterTestFixture, RankTest) {
+  testing::internal::CaptureStdout();
+  adapter_.Rank(30);
+  std::string output = testing::internal::GetCapturedStdout();
+  EXPECT_FALSE(output.empty());
+}
