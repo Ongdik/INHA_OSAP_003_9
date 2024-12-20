@@ -127,3 +127,10 @@ class SetAdapterTestFixture : public ::testing::Test {
     // 테스트가 끝난 후 호출됨
   }
 };
+
+// SetAdapter의 Insert 함수 테스트
+TEST_F(SetAdapterTestFixture, InsertTest) {
+  adapter_.Insert(15);
+  EXPECT_EQ(adapter_.GetAdaptee().GetSize(), 6);
+  EXPECT_EQ(adapter_.GetAdaptee().Finding(15), 2);
+}
