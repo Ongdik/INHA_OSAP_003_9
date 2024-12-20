@@ -134,3 +134,10 @@ TEST_F(SetAdapterTestFixture, InsertTest) {
   EXPECT_EQ(adapter_.GetAdaptee().GetSize(), 6);
   EXPECT_EQ(adapter_.GetAdaptee().Finding(15), 2);
 }
+
+// SetAdapter의 Erase 함수 테스트
+TEST_F(SetAdapterTestFixture, EraseTest) {
+  adapter_.Erase(20);
+  EXPECT_EQ(adapter_.GetAdaptee().GetSize(), 4);
+  EXPECT_EQ(adapter_.GetAdaptee().Finding(20), 0);
+}
