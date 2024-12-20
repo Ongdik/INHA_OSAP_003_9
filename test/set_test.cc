@@ -105,3 +105,25 @@ TEST_P(AVLTreeParameterizedTest, FindingTest) {
   auto [key, expected] = GetParam();
   EXPECT_EQ(tree_.Finding(key), expected);
 }
+
+// SetAdapter의 테스트를 위한 Fixture
+class SetAdapterTestFixture : public ::testing::Test {
+ public:
+  SetAdapterTestFixture() : adapter_(AVLTree()) {}
+  ~SetAdapterTestFixture() override = default;
+
+ protected:
+  SetAdapter adapter_;
+
+  void SetUp() override {
+    adapter_.Insert(10);
+    adapter_.Insert(20);
+    adapter_.Insert(30);
+    adapter_.Insert(5);
+    adapter_.Insert(25);
+  }
+
+  void TearDown() override {
+    // 테스트가 끝난 후 호출됨
+  }
+};
