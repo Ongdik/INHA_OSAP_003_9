@@ -79,3 +79,18 @@ TEST_F(AVLTreeTestFixture, RotateFunctionsTest) {
   node* rootNode = tree_.Search(tree_.GetRoot(), 30);
   EXPECT_GT(rootNode->height, 0);
 }
+
+// 매개변수화된 AVLTree의 Finding 함수 테스트
+class AVLTreeParameterizedTest
+    : public ::testing::TestWithParam<std::tuple<int, int>> {
+ protected:
+  AVLTree tree_;
+
+  void SetUp() override {
+    tree_.Inserting(10);
+    tree_.Inserting(20);
+    tree_.Inserting(30);
+    tree_.Inserting(5);
+    tree_.Inserting(25);
+  }
+};
