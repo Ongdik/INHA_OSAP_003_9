@@ -151,3 +151,8 @@ TEST_F(SetAdapterTestFixture, EmptyTest) {
 TEST_F(SetAdapterTestFixture, SizeTest) {
   EXPECT_EQ(adapter_.GetAdaptee().GetSize(), 5);
 }
+
+// SetAdapter의 Height 함수 테스트
+TEST_F(SetAdapterTestFixture, HeightTest) {
+  EXPECT_GT(adapter_.GetAdaptee().GetHeight(), 0);
+}
