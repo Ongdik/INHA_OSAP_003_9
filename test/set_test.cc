@@ -40,3 +40,10 @@ TEST_F(AVLTreeTestFixture, InsertTest) {
   EXPECT_EQ(tree_.GetSize(), 6);
   EXPECT_EQ(tree_.Finding(15), 2);
 }
+
+// AVLTree의 Erase 함수 테스트
+TEST_F(AVLTreeTestFixture, EraseTest) {
+  tree_.Erasing(20);
+  EXPECT_EQ(tree_.GetSize(), 4);
+  EXPECT_EQ(tree_.Finding(20), 0);
+}
