@@ -164,3 +164,11 @@ TEST_F(SetAdapterTestFixture, AncestorTest) {
   std::string output = testing::internal::GetCapturedStdout();
   EXPECT_FALSE(output.empty());
 }
+
+// SetAdapter의 Average 함수 테스트
+TEST_F(SetAdapterTestFixture, AverageTest) {
+  testing::internal::CaptureStdout();
+  adapter_.Average(10);
+  std::string output = testing::internal::GetCapturedStdout();
+  EXPECT_FALSE(output.empty());
+}
