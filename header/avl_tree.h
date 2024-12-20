@@ -42,6 +42,9 @@ class AVLTree {
   void GetRank(int x);
   void Erasing(int key);
 
+  // 테스트위한 Getter
+  node* GetRoot();
+
  private:
   node* root_;
   int size_;
