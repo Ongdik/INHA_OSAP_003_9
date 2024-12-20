@@ -27,6 +27,9 @@ class SetAdapter : public Set {
   void Rank(int x) override;
   void Erase(int x) override;
 
+  // 테스트 위한 Getter
+  AVLTree GetAdaptee();
+
  private:
   AVLTree adaptee_;  // 내부적으로 사용할 AVLTree 객체
 };
