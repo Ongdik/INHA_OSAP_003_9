@@ -52,3 +52,10 @@ TEST_F(AVLTreeTestFixture, EraseTest) {
 TEST_F(AVLTreeTestFixture, GetHeightTest) {
   EXPECT_GT(tree_.GetHeight(), 0);
 }
+
+// AVLTree의 Balance 함수 테스트
+TEST_F(AVLTreeTestFixture, BalanceTest) {
+  tree_.Inserting(40);
+  tree_.Inserting(50);
+  EXPECT_GT(tree_.GetHeight(), 3);
+}
