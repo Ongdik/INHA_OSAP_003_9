@@ -69,7 +69,7 @@ TEST_F(AVLTreeTestFixture, GetDepthTest) {
 // AVLTree의 GetSubTreeSize 함수 테스트
 TEST_F(AVLTreeTestFixture, GetSubTreeSizeTest) {
   node* foundNode = tree_.Search(tree_.GetRoot(), 10);
-  EXPECT_EQ(tree_.GetSubTreeSize(foundNode), 5);
+  EXPECT_EQ(tree_.GetSubTreeSize(foundNode), 2);
 }
 
 // AVLTree의 UpdateHeight, RotateLeft, RotateRight 함수 테스트
@@ -97,8 +97,13 @@ class AVLTreeParameterizedTest
 
 INSTANTIATE_TEST_CASE_P(
     AVLTreeFindingTests, AVLTreeParameterizedTest,
-    ::testing::Values(std::make_tuple(10, 0), std::make_tuple(20, 1),
-                      std::make_tuple(30, 2), std::make_tuple(5, 1),
+    //      20
+    //    /   /
+    //  10    30
+    //  /     /
+    // 5    25
+    ::testing::Values(std::make_tuple(10, 2), std::make_tuple(20, 2),
+                      std::make_tuple(30, 2), std::make_tuple(5, 2),
                       std::make_tuple(25, 2), std::make_tuple(50, 0)));
 
 TEST_P(AVLTreeParameterizedTest, FindingTest) {
