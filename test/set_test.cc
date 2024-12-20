@@ -156,3 +156,11 @@ TEST_F(SetAdapterTestFixture, SizeTest) {
 TEST_F(SetAdapterTestFixture, HeightTest) {
   EXPECT_GT(adapter_.GetAdaptee().GetHeight(), 0);
 }
+
+// SetAdapter의 Ancestor 함수 테스트
+TEST_F(SetAdapterTestFixture, AncestorTest) {
+  testing::internal::CaptureStdout();
+  adapter_.Ancestor(25);
+  std::string output = testing::internal::GetCapturedStdout();
+  EXPECT_FALSE(output.empty());
+}
