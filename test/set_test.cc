@@ -47,3 +47,8 @@ TEST_F(AVLTreeTestFixture, EraseTest) {
   EXPECT_EQ(tree_.GetSize(), 4);
   EXPECT_EQ(tree_.Finding(20), 0);
 }
+
+// AVLTree의 GetHeight 함수 테스트
+TEST_F(AVLTreeTestFixture, GetHeightTest) {
+  EXPECT_GT(tree_.GetHeight(), 0);
+}
