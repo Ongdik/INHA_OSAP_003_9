@@ -141,3 +141,8 @@ TEST_F(SetAdapterTestFixture, EraseTest) {
   EXPECT_EQ(adapter_.GetAdaptee().GetSize(), 4);
   EXPECT_EQ(adapter_.GetAdaptee().Finding(20), 0);
 }
+
+// SetAdapter의 Empty 함수 테스트
+TEST_F(SetAdapterTestFixture, EmptyTest) {
+  EXPECT_EQ(adapter_.GetAdaptee().IsEmpty(), 0);
+}
