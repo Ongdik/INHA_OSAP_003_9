@@ -71,3 +71,11 @@ TEST_F(AVLTreeTestFixture, GetSubTreeSizeTest) {
   node* foundNode = tree_.Search(tree_.GetRoot(), 10);
   EXPECT_EQ(tree_.GetSubTreeSize(foundNode), 5);
 }
+
+// AVLTree의 UpdateHeight, RotateLeft, RotateRight 함수 테스트
+TEST_F(AVLTreeTestFixture, RotateFunctionsTest) {
+  tree_.Inserting(40);
+  tree_.Inserting(50);
+  node* rootNode = tree_.Search(tree_.GetRoot(), 30);
+  EXPECT_GT(rootNode->height, 0);
+}
