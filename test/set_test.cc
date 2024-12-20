@@ -1,23 +1,27 @@
-#include "../header/set.h"
-
 #include <gtest/gtest.h>
 
-// 테스트 위한 AVLTree의 추상 메서드
-class MockAVLTree : public Set {
- public:
-  void Find(int x) override {}
-  void Insert(int x) override {}
-  void Empty() override {}
-  void Size() override {}
-  void Height() override {}
-  void Ancestor(int x) override {}
-  void Average(int x) override {}
-  void Rank(int x) override {}
-  void Erase(int x) override {}
-};
+#include "../header/avl_tree.h"
+#include "../header/set_adapter.h"
 
-// 초기화 테스트
-TEST(AVLTreeTest, Initialization) {
-  MockAVLTree tree;
-  SUCCEED();
-}
+// AVLTree의 테스트를 위한 Fixture
+class AVLTreeTestFixture : public ::testing::Test {
+ public:
+  AVLTreeTestFixture() = default;
+  ~AVLTreeTestFixture() override = default;
+
+ protected:
+  AVLTree tree_;
+
+  void SetUp() override {
+    // 초기화 - 테스트를 시작하기 전에 호출됨
+    tree_.Inserting(10);
+    tree_.Inserting(20);
+    tree_.Inserting(30);
+    tree_.Inserting(5);
+    tree_.Inserting(25);
+  }
+
+  void TearDown() override {
+    // 테스트가 끝난 후 호출됨
+  }
+};
