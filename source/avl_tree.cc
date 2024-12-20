@@ -290,3 +290,8 @@ void AVLTree::GetAverage(int x) {
 
   cout << (min_val + max_val) / 2 << endl;
 }
+
+// 테스트 코드 추가
+node* AVLTree::GetRoot() {
+  return root_;
+}
