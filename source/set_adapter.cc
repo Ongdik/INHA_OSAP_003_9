@@ -1,5 +1,7 @@
 #include "../header/set_adapter.h"
 
+SetAdapter::SetAdapter(AVLTree adaptee) : adaptee_(adaptee) {}
+
 void SetAdapter::Find(int key) {
   cout << adaptee_.Finding(key) << "\n";
 }
